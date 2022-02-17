@@ -10,16 +10,20 @@ public class Main {
 		// TODO 自動生成されたメソッド・スタブ
 
 	{
-//      問① 下記の配列はInteger型しか格納できないように修正してください。
-//		   現状は全てのクラスの継承元であるObject型を指定しているので、Stringもintも格納可能になっています。
-	       List<Integer> array = new ArrayList<>();
+//      問① 下記の配列はString型しか格納できないように修正してください。
+//		   現状は全てのクラスの継承元であるObject型を指定しているので、Integerもintも格納可能になっています。
+	       List<String> array = new ArrayList<>();
 //	    <以下記述>
 
 //      問② 前から二つ目の要素を"bar"にしましょう。
 //	　<以下記述>
+	       array.add("");
+	       array.add("bar");
+	       array.add("foo");
 	       
 //      問③ fooが格納されているインデックスを出力してください。
 //	　<以下記述>
+	       System.out.println("fooのインデックス:" + array.indexOf("foo"));
 	       
 	}
 
