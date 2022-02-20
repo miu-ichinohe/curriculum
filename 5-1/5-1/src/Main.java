@@ -51,14 +51,19 @@ public class Main {
 //      問⑦ 配列arrayDateに今の年・月・日を入れてください。
            Calendar cal = Calendar.getInstance();
 //	    <以下記述>
-           System.out.println(cal.get(Calendar.YEAR));
-           System.out.println(cal.get(Calendar.MONTH) + 1);
-           System.out.println(cal.get(Calendar.DATE));
+           int[] arrayDate = new int [3];
+           
+           arrayDate[0] = cal.get(Calendar.YEAR);
+           arrayDate[1] = cal.get(Calendar.MONTH) + 1;
+           arrayDate[2] = cal.get(Calendar.DATE);
 //      問⑧ 配列arrayDateをList型に変更しましょう。
 //	    <以下記述>
+	   List<String> dateList = new ArrayList<>();
 //      問⑨ 上記で格納した要素を繰り返しで出力しましょう。
 //	    <以下記述>
-	
-		}
+	   for(int i = 0; i < arrayDate.length; i++){
+               System.out.println(arrayDate[i]);
+           }
+	}
   }
 }
