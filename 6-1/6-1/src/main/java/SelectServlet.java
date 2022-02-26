@@ -17,14 +17,14 @@ public class SelectServlet extends HttpServlet {
             throws IOException, ServletException {
         request.setCharacterEncoding("UTF-8");
         // 問① select.htmlから渡された値を受け取るために下記を修正しましょう。
-        String value = request.getParameter("args");
+        String value = request.getParameter("month");
         response.setContentType("text/html; charset=UTF-8");
         PrintWriter out = response.getWriter();
         // 問② エビデンスと同じ表示になるように修正しましょう。
         out.print("<body>");
         out.print("今は");
         out.print(value);
-        out.print("です。");
+        out.print("月です。");
         out.print("</body>");
     }
 }

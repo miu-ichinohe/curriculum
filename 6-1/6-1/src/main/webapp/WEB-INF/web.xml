@@ -12,6 +12,6 @@
  <servlet-mapping>
  <servlet-name>select</servlet-name>
  <!--問② URLパターンを記述してください。-->
- <url-pattern>/sample</url-pattern>
+ <url-pattern>/month</url-pattern>
  </servlet-mapping>
 </web-app>
