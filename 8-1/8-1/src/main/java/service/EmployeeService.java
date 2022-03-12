@@ -31,11 +31,11 @@ public class EmployeeService {
  
   // 問② 入力された値で、UPDATEする文
  /** ・SQL UPDATE文 */
- private static final String SQL_UPDATE = "\"update employee_table set '?' = to_char(current_timestamp, 'yyyy/MM/dd HH24:MI:SS') where id = '?'\";";
+ private static final String SQL_UPDATE = "ここを改修";
  
   // 問③ 入力されたIDとPassWordをキーにして、検索するSELECT文
  /** ・SQL SELECT文 */
- private static final String SQL_SELECT = "\"select * from employee_table where id = '?' AND password = '?'\";";
+ private static final String SQL_SELECT = "SELECT * FROM employee_table where id='?' AND password='?'";
  
  EmployeeBean employeeDate = null;
  
@@ -70,7 +70,7 @@ public class EmployeeService {
  preparedStatement.setString(1, login_time);
  preparedStatement.setString(2, id);
   // 問⑤ UPDATEを実行する文を記述
- preparedStatement.executeUpdate(SQL_UPDATE);
+ preparedStatement.executeUpdate();
  /*
  * UPDATEが成功したものを即座に表示
  * 任意のユーザーを検索できるように、プリペアドステートメントを記述。
@@ -86,13 +86,13 @@ public class EmployeeService {
   // 問⑦ tmpName,tmpComment,tmpLoginTimeに適当な値を入れてください。
  String tmpName = resultSet.getString("name");
  String tmpComment = resultSet.getString("comment");
- String tmpLoginTime = resultSet.getString("logintime");
+ String tmpLoginTime = resultSet.getString("login_time");
  
   // 問⑧ EmployeeBeanに取得したデータを入れてください。
  employeeDate = new EmployeeBean();
- employeeDate.setName("tmpName");
- employeeDate.setComment("tmpComment");
- employeeDate.setLogin_Time("tmpLoginTime");
+ employeeDate.setName("ここ改修");
+ employeeDate.setComment("ここ改修");
+ employeeDate.setLogin_Time("ここ改修");
  }
  
   // forName()で例外発生
