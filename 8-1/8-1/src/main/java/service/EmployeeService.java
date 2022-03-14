@@ -90,9 +90,9 @@ public class EmployeeService {
  
   // 問⑧ EmployeeBeanに取得したデータを入れてください。
  employeeDate = new EmployeeBean();
- employeeDate.setName("ここ改修");
- employeeDate.setComment("ここ改修");
- employeeDate.setLogin_Time("ここ改修");
+ employeeDate.setName(tmpName);
+ employeeDate.setComment(tmpComment);
+ employeeDate.setLogin_Time(tmpLoginTime);
  }
  
   // forName()で例外発生
