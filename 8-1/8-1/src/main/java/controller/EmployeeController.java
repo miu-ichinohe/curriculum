@@ -20,7 +20,7 @@ public class EmployeeController extends HttpServlet {
  throws ServletException, IOException {
  
  try {
-  // 問① index.htmlから送信されたIDとPassWordの値を取得できるように修正しましょう。
+  // HTTPメソッド　パラメーター　データの受け渡し
  String id = request.getParameter("id");
  String password = request.getParameter("password");
  
@@ -29,15 +29,17 @@ public class EmployeeController extends HttpServlet {
  * ※ EmployeeBeanとEmployeeServiceをimportするのを忘れないでください。
  */
  
-  // 問② EmployeeServiceクラスをインスタンス化する。
+  // ↓インスタンス時に実行されるメソッド=コンストラクタ
  EmployeeService es = new EmployeeService();
-  // 問③ EmployeeBeanに、EmployeeServiceよりsearch関数を呼び出し、返り値を格納する。
+  // EmployeeServiceよりsearch関数を呼び出し、返り値を格納する。
  EmployeeBean emp = es.search(id , password);
-  // 問④ nullの部分に適切な引数をセットする。
+  // emp=search関数からの戻り値を代入
  request.setAttribute("EmployeeBean", emp);
  
+  //↓発生した例外をキャッチ。複数記述可能。
  } catch (Exception e) {
  e.printStackTrace();
+  //↓例外が起きても起きなくても、最後に必ずしなければならない処理
  } finally {
  ServletContext context = this.getServletContext();
  RequestDispatcher dispatcher = context.getRequestDispatcher("/index.jsp");
