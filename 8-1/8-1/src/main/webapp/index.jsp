@@ -3,7 +3,7 @@
 <%@ page import="bean.EmployeeBean"%>
  
 <%
- // 問① getAttributeに適切な引数をセットして、EmployeeControllerから渡されたBeanを取得する。
+ // EmployeeController.javaから渡されたBeanを受けとります。
  EmployeeBean employeeBean = (EmployeeBean) request.getAttribute("EmployeeBean");
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
