@@ -1,9 +1,11 @@
+//↓クラスファイルの集まりを示すもの。　パッケージを使用することで複数のクラスファイルを分類し、管理する事ができる。
 package controller;
  
 /**
  * 社員情報管理コントローラー
  */
  
+//↓他のパッケージに記入されているクラスや関数を実行するための方法。
 import java.io.IOException;
 
 import javax.servlet.RequestDispatcher;
@@ -15,6 +17,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import service.EmployeeService;
  
+　//　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　
 public class EmployeeController extends HttpServlet {
  public void doPost(HttpServletRequest request, HttpServletResponse response)
  throws ServletException, IOException {
