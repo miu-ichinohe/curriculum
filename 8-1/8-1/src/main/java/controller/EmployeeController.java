@@ -51,6 +51,7 @@ public class EmployeeController extends HttpServlet {
  e.printStackTrace();
   //↓例外が起きても起きなくても、最後に必ずしなければならない処理
  } finally {
+  //①EmployeeController　→　②dispatcher → ③index.jsp　　　(repuest,response をforward転送している。)
  ServletContext context = this.getServletContext();
  RequestDispatcher dispatcher = context.getRequestDispatcher("/index.jsp");
  dispatcher.forward(request, response);
