@@ -17,13 +17,19 @@ import javax.servlet.http.HttpServletResponse;
 
 import service.EmployeeService;
  
-　//　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　
+　                              //↓元クラスをベースにして、同じ定義は省略する。（違いだけを記述する）　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　
 public class EmployeeController extends HttpServlet {
+
+ /*「GET」メソッドはクライアントからページの要求を行う場合に使われます。直接サーブレット名をURLに指定して表示したりリンクに設定されたサーブレットをクリックした場合には「GET」を使ってリクエストが来ます。
+   またフォームにおいて送信方法に「GET」を使った場合にも「GET」メソッドが使われます。
+   「POST」メソッドはクライアントからデータを送る場合に使われます。主にフォームにおいて送信方法に「POST」を指定した場合に使われます。
+ */
+                    //↓HTTPリクエストに対応　　　　　　　　　　　　　　　　　　　　↓HTTPレスポンスに対応
  public void doPost(HttpServletRequest request, HttpServletResponse response)
  throws ServletException, IOException {
  
  try {
-  // HTTPメソッド　パラメーター　データの受け渡し
+  // HTTPメソッド　パラメーター　データの受け渡し　　ユーザーからの情報をパラーメータとして受け取る
  String id = request.getParameter("id");
  String password = request.getParameter("password");
  
@@ -34,13 +40,14 @@ public class EmployeeController extends HttpServlet {
  
   // ↓インスタンス時に実行されるメソッド=コンストラクタ
  EmployeeService es = new EmployeeService();
-  // EmployeeServiceよりsearch関数を呼び出し、返り値を格納する。
+  // EmployeeServiceよりsearch関数を呼び出し、返り値を格納する。（任意のユーザー情報をもとに、社員情報の照会をする必要があるため、EmployeeService の search メソッドの呼び出す。）
  EmployeeBean emp = es.search(id , password);
   // emp=search関数からの戻り値を代入
  request.setAttribute("EmployeeBean", emp);
  
   //↓発生した例外をキャッチ。複数記述可能。
  } catch (Exception e) {
+  //↓実行したメソッドの時系列の一覧を出力。
  e.printStackTrace();
   //↓例外が起きても起きなくても、最後に必ずしなければならない処理
  } finally {
