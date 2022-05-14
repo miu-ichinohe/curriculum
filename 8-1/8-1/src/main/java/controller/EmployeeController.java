@@ -42,7 +42,7 @@ public class EmployeeController extends HttpServlet {
  EmployeeService es = new EmployeeService();
   // EmployeeServiceよりsearch関数を呼び出し、返り値を格納する。（任意のユーザー情報をもとに、社員情報の照会をする必要があるため、EmployeeService の search メソッドの呼び出す。）
  EmployeeBean emp = es.search(id , password);
-  // emp=search関数からの戻り値を代入
+  // emp=search関数からの戻り値を代入 リクエストスコープへ格納。第1引数にデータの名前、第2引数でデータを与える。
  request.setAttribute("EmployeeBean", emp);
  
   //↓発生した例外をキャッチ。複数記述可能。
