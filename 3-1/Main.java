@@ -5,27 +5,31 @@
  */
 public class Main{
     public static void main(String[] args){
-        /*
-        * 問1
-        * int型の配列dataを作成し、値を3,1,2,7,5で初期化しなさい
-        */
-
+        
+　　　　　　　　　　　　　　　　　//↓int型の配列dateに、3,1,2,7,5を代入
         int[] data ={3,1,2,7,5};
 
-        /*
-        * 問2
-        * 以下のfor文を完成させなさい
+        
+        /* 
+          iは0から始まり、for文内の処理（print()による表示）を実行しながら 
+          1ずつ増えていき、data.length（＝5） になったところでループを終了する。
+          ※lengthは配列内の要素数を指定できる 属性(プロパティ) です。
         */
         for(int i = 0; i < data.length; i++){
             System.out.print(data[i] + " ");
         }
-        System.out.println();
+        
+        System.out.println();     //改行を出力
+        
+        
+        /*
+          i=0（初期値）; i <　4回繰り返す（繰り返し条件）; i++（１ずつ増やす）
+          j > i なるまで繰り返す; 1ずつ減らしていく
+        */ 
         for (int i = 0; i < data.length - 1; i++) {
             for (int j = data.length - 1; j > i; j--) {
-                /*
-                * 問3
-                * 以下、配列の添字を入れてソートを完成させなさい
-                */
+                
+                
                 if(data[i] > data[j]){
                   int box = data[i];
                   data[i] = data[j];
