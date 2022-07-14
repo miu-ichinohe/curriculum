@@ -6,14 +6,17 @@
 }
 .header{
  float: auto;
+ /* 上の余白 */
  margin-top: 10px;
+ /* 横幅 */
  width: 400pX;
+ /* 左寄せ */
  text-align: left;
- /* 問① 背景を青色にする */
+ /* 背景を青色にする */
  background-color: blue;
- /* 問② 文字の色を白にする */
+ /* 文字の色を白にする */
  color: white;
- /* 問③ 背景に対して文字を縦方向に中央揃え */
+ /* 背景に対して文字を縦方向に中央揃え */
  display: flex;
  align-items: center; 
 }
@@ -37,19 +40,23 @@ input#button {
  margin: 0 auto;
 }
 ul li.pass {
+ /* 下の余白 */
  margin-bottom: 15px;
 }
  
 .footer{
  float: auto;
+ /* 上の余白 */
  margin-top: 10px;
+ /* 横幅 */
  width: 400pX;
+ /* 左寄せ */
  text-align: left;
- /* 問④ 背景を青色にする */
+ /* 背景を青色にする */
  background-color: blue;
- /* 問⑤ 文字の色を白にする */
+ /* 文字の色を白にする */
  color: white;
- /* 問⑥ 背景に対して文字を縦方向に中央揃え */
+ /* 背景に対して文字を縦方向に中央揃え */
  display: flex;
  align-items: center; 
 }
