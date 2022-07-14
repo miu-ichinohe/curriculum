@@ -3,6 +3,7 @@
   <display-name>8-1</display-name>
  <servlet>
  <servlet-name>search</servlet-name>
+ //動かしたいサーブレットクラス
  <servlet-class>controller.EmployeeController</servlet-class>
  </servlet>
  <servlet-mapping>
