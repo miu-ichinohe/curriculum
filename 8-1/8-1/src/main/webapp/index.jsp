@@ -3,7 +3,7 @@
 <%@ page import="bean.EmployeeBean"%>
  
 <%
- // EmployeeController.javaから渡されたBeanを受けとります。
+ // EmployeeController.javaから渡されたBeanを受けとります。リクエストスコープからの値を取得
  EmployeeBean employeeBean = (EmployeeBean) request.getAttribute("EmployeeBean");
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
