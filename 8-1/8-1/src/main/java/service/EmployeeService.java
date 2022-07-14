@@ -17,7 +17,7 @@ import bean.EmployeeBean;
  
 public class EmployeeService {
  
-  // 問① 接続情報を記述してください
+  
  /** ドライバーのクラス名 */
  private static final String POSTGRES_DRIVER = "org.postgresql.Driver";
  /** ・JDBC接続先情報 */
@@ -29,11 +29,11 @@ public class EmployeeService {
  /** ・タイムフォーマット */
  private static final String TIME_FORMAT = "yyyy/MM/dd HH:mm:ss";
  
-  // 問② 入力された値で、UPDATEする文
+  // 入力された値で、UPDATEする文
  /** ・SQL UPDATE文 */
  private static final String SQL_UPDATE = "update employee_table set login_time= ? where id = ?";
  
-  // 問③ 入力されたIDとPassWordをキーにして、検索するSELECT文
+  // 入力されたIDとPassWordをキーにして、検索するSELECT文
  /** ・SQL SELECT文 */
  private static final String SQL_SELECT = "select * from employee_table where id = ? AND password = ?";
  
@@ -66,10 +66,10 @@ public class EmployeeService {
  
   // preparedStatementに実行したいSQLを格納
  preparedStatement = connection.prepareStatement(SQL_UPDATE);
-  // 問④ preparedStatementを使って、一番目のindexに今の時間をセットしてください。2番目のindexにIDをセットしてください。
+  // preparedStatementを使って、一番目のindexに今の時間をセットしてください。2番目のindexにIDをセットしてください。
  preparedStatement.setString(1, login_time);
  preparedStatement.setString(2, id);
-  // 問⑤ UPDATEを実行する文を記述
+  // UPDATEを実行する文を記述
  preparedStatement.executeUpdate();
  /*
  * UPDATEが成功したものを即座に表示
@@ -83,12 +83,12 @@ public class EmployeeService {
  resultSet = preparedStatement.executeQuery();
  
  while (resultSet.next()) {
-  // 問⑦ tmpName,tmpComment,tmpLoginTimeに適当な値を入れてください。
+  // tmpName,tmpComment,tmpLoginTimeに適当な値を入れてください。
  String tmpName = resultSet.getString("name");
  String tmpComment = resultSet.getString("comment");
  String tmpLoginTime = resultSet.getString("login_time");
  
-  // 問⑧ EmployeeBeanに取得したデータを入れてください。
+  // EmployeeBeanに取得したデータを入れてください。
  employeeDate = new EmployeeBean();
  employeeDate.setName(tmpName);
  employeeDate.setComment(tmpComment);
