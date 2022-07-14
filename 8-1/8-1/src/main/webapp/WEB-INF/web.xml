@@ -10,7 +10,7 @@
  <servlet-mapping>
  //servletの<servlet-name>と同じにする
  <servlet-name>search</servlet-name>
- //サーブレットクラス（EmployeeController）のsearchにクライアントからのリクエストが渡される
+ //可読性 と サーブレットの紐づけの親和性 が高まるようなその機能に合った意味を持つ文言を記述するようにする
  <url-pattern>/search</url-pattern>
  </servlet-mapping>
  //ウェルカムページとはディフォルトのページ
