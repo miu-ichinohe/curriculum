@@ -14,7 +14,7 @@
 </head>
 <body>
  <div align="center">
- <!-- 検索が成功した場合の表示 -->
+ <!-- 検索が成功した場合の表示　　getメソッドを用いて取得データの値を表示 -->
  <%
  if (employeeBean != null) {
  %>
