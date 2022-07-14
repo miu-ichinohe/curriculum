@@ -29,7 +29,7 @@ public class EmployeeController extends HttpServlet {
  throws ServletException, IOException {
  
  try {
-  // HTTPメソッド　パラメーター　データの受け渡し　　ユーザーからの情報をパラーメータとして受け取る
+  // HTTPメソッド　パラメーター　データの受け渡し　　ユーザーからの情報をパラーメータとして受け取る(リクエストパラメータとは、フォームから送られてきたデータ)
  String id = request.getParameter("id");
  String password = request.getParameter("password");
  
@@ -40,9 +40,9 @@ public class EmployeeController extends HttpServlet {
  
   // ↓インスタンス時に実行されるメソッド=コンストラクタ
  EmployeeService es = new EmployeeService();
-  // EmployeeServiceよりsearch関数を呼び出し、返り値を格納する。（任意のユーザー情報をもとに、社員情報の照会をする必要があるため、EmployeeService の search メソッドの呼び出す。）
+  // EmployeeServiceよりsearch関数を呼び出し、返り値を格納する。（ユーザー情報をもとに、社員情報の照会をする必要があるため、EmployeeService の search メソッドを呼び出す。）
  EmployeeBean emp = es.search(id , password);
-  // emp=search関数からの戻り値を代入 リクエストスコープへ格納。第1引数にデータの名前、第2引数でデータを与える。
+  // emp=search関数からの戻り値を代入(→jspで受け取る) リクエストスコープへ格納。第1引数にデータの名前、第2引数でデータを与える。
  request.setAttribute("EmployeeBean", emp);
  
   //↓発生した例外をキャッチ。複数記述可能。
