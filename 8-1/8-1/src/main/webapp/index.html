@@ -2,10 +2,13 @@
 <html>
 <head>
 <meta charset="UTF-8">
+ <!-- ブラウザのタブ -->
 <title>社員情報システム</title>
+ <!-- CSSのリンク -->
 <link rel="stylesheet" type="text/css" href="./css/index.css">
 </head>
 <body>
+ <!-- ”action”は送信先を指定するためのもの ”method”は転送方法-->
  <form action="/8-1/search" method="post">
  <div class="wrapper">
  <div class="header">社員情報システム</div>
@@ -22,7 +25,8 @@
  </li>
  
  <!-- 検索ボタン -->
- <li><input id="button" type="submit" name="button" value="検索">
+ <li>
+ <input id="button" type="submit" name="button" value="検索">
  </li>
  </ul>
  <div class="footer">hoge.inc</div>
@@ -30,3 +34,5 @@
  </form>
 </body>
 </html>
+
+<!-- <input> タグで入力部分や選択部分を作成し、 <form> タグで送信ボタンの作成、送信の設定を行う。 -->
