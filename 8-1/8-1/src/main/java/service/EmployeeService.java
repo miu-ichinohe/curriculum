@@ -20,7 +20,7 @@ public class EmployeeService {
   
  /** ドライバーのクラス名 */
  private static final String POSTGRES_DRIVER = "org.postgresql.Driver";
- /** ・JDBC接続先情報 */
+ /** ・JDBC接続先情報 =javaプログラムとデータベースを接続するためのもの*/
  private static final String JDBC_CONNECTION = "jdbc:postgresql://localhost:5432/Employee";
  /** ・ユーザー名 */
  private static final String USER = "postgres";
@@ -30,11 +30,11 @@ public class EmployeeService {
  private static final String TIME_FORMAT = "yyyy/MM/dd HH:mm:ss";
  
   // 入力された値で、UPDATEする文
- /** ・SQL UPDATE文 */
+ /** ・SQL UPDATE文 =更新　UPDATE文はSET宣言も必要　　ユーザーからの情報（id）を抽出し、そこのlogin_timeを変更・更新する*/
  private static final String SQL_UPDATE = "update employee_table set login_time= ? where id = ?";
  
   // 入力されたIDとPassWordをキーにして、検索するSELECT文
- /** ・SQL SELECT文 */
+ /** ・SQL SELECT文 =命令文　　*=テーブル全表示　where=ユーザーからの情報（id&password）で抽出*/
  private static final String SQL_SELECT = "select * from employee_table where id = ? AND password = ?";
  
  EmployeeBean employeeDate = null;
