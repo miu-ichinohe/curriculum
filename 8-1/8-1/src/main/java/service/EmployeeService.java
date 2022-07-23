@@ -1,3 +1,8 @@
+/*
+EmployeeServiceクラスは、 search() メソッドにより、
+*ユーザID（ id ） と パスワード（ password ） を条件にして、
+*合致するものが、任意のデータベースのテーブルにあるかないかを判別する処理を行っている。
+*/
 package service;
  
 import java.sql.Connection;
