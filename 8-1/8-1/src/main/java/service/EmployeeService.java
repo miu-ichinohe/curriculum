@@ -88,7 +88,7 @@ public class EmployeeService {
  String tmpComment = resultSet.getString("comment");
  String tmpLoginTime = resultSet.getString("login_time");
  
-  // EmployeeBeanに取得したデータを入れてください。
+  // EmployeeBeanに取得したデータを入れる（set~）
  employeeDate = new EmployeeBean();
  employeeDate.setName(tmpName);
  employeeDate.setComment(tmpComment);
