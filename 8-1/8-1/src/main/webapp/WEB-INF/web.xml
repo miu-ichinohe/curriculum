@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>8-1</display-name>
+ <servlet>
+ <servlet-name>search</servlet-name>
+ //動かしたいサーブレットクラス
+ <servlet-class>controller.EmployeeController</servlet-class>
+ </servlet>
+ //マッピングとは、Webコンテナがサーブレットを選んでクライアントのリクエストを渡すためのもの
+ <servlet-mapping>
+ //servletの<servlet-name>と同じにする
+ <servlet-name>search</servlet-name>
+ //可読性 と サーブレットの紐づけの親和性 が高まるようなその機能に合った意味を持つ文言を記述するようにする
+ <url-pattern>/search</url-pattern>
+ </servlet-mapping>
+ //ウェルカムページとはディフォルトのページ
+ <welcome-file-list>
+ <welcome-file>index.html</welcome-file>
+ </welcome-file-list>
+</web-app>
