@@ -1,11 +1,15 @@
+//MainクラスとPetクラスファイルをまとめているパッケージ(check)
 package check;
 
+//constansパッケージの中のConstantsクラスを実行できるようにしている
 import constans.Constants;
+
 
 public class Main {
 	
 
 	public static void main(String[] args) {
+		//printNameメソッド
 		printName ("一戸" , "美羽");
 		
 		Pet pet = new Pet (Constants.CHECK_CLASS_JAVA , Constants.CHECK_CLASS_HOGE);
