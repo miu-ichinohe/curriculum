@@ -12,8 +12,9 @@ public class Main {
 		//printNameメソッド実行　引数として一戸、美羽を渡す
 		printName ("一戸" , "美羽");
 		
-		
+		//Petクラスをインスタンス化（Constants.CHECK_CLASS_JAVA , Constants.CHECK_CLASS_HOGE）を渡す
 		Pet pet = new Pet (Constants.CHECK_CLASS_JAVA , Constants.CHECK_CLASS_HOGE);
+		//introduceメソッド実行
 		pet. introduce(); 
 		
 		RobotPet robotPet = new RobotPet(Constants.CHECK_CLASS_R2D2 , Constants.CHECK_CLASS_LUKE);
