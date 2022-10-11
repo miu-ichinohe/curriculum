@@ -6,7 +6,8 @@ public class Pet {
 	    private String masterName;
 
 	    public Pet(String name, String masterName) {
-	        this.name = name;
+	           //↓５行目のname = 引数のname
+		this.name = name;
 	        this.masterName = masterName;
 	    }
 
@@ -23,7 +24,7 @@ public class Pet {
 	        System.out.println("■ご主人様は" + masterName + "です");
 	    }
 	}
-
+	//
 	class RobotPet extends Pet {
 	    public RobotPet(String name, String masterName) {
 	        super(name, masterName);
