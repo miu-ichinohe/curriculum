@@ -1,15 +1,15 @@
 //MainクラスとPetクラスファイルをまとめているパッケージ(check)
 package check;
 
-//constansパッケージの中のConstantsクラスを実行できるようにしている
+//constansパッケージの中のConstantクラスがもっている、メソッドを実行するための情報をもってくる
 import constans.Constants;
 
-
+//Mainクラスを定義している
 public class Main {
 	
-	//メインメソッド
+	//メインメソッド　（実行するためのメソッド）
 	public static void main(String[] args) {
-		//printNameメソッド実行　引数として一戸、美羽を渡す
+		//printNameメソッド実行　　引数として一戸、美羽を渡す
 		printName ("一戸" , "美羽");
 		
 		//Petクラスをインスタンス化（Constants.CHECK_CLASS_JAVA , Constants.CHECK_CLASS_HOGE）を渡す
