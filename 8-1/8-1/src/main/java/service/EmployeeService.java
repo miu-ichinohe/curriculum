@@ -53,16 +53,16 @@ public class EmployeeService {
  PreparedStatement preparedStatement = null;
  
  try {
-  // データベースに接続
- Class.forName(POSTGRES_DRIVER);
- connection = DriverManager.getConnection(JDBC_CONNECTION, USER, PASS);
- statement = connection.createStatement();
+  /** データベースに接続 */
+ Class.forName(POSTGRES_DRIVER); //データベースへ接続する下準備。Class.forName()メソッドにJDBCドライバ名を文字列で与え、JDBCドライバをロードしている。
+ connection = DriverManager.getConnection(JDBC_CONNECTION, USER, PASS); //データベースの接続。
+ statement = connection.createStatement(); //
  
-  // 処理が流れた時間をフォーマットに合わせて生成
+  /** 処理が流れた時間をフォーマットに合わせて生成 */
  Calendar cal = Calendar.getInstance();
  SimpleDateFormat sdFormat = new SimpleDateFormat(TIME_FORMAT);
  
-  // PreparedStatementで使用するため、String型に変換
+  /** PreparedStatementで使用するため、String型に変換 */
  String login_time = sdFormat.format(cal.getTime());
  
  /*
