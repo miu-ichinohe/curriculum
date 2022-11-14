@@ -8,33 +8,44 @@ public class EmployeeBean {
     private String Name;
     private String Comment;
     private String Login_Time;
+    
+    //IDを取得
     public void setId(String Id) {
         this.Id = Id;
     }
-    public String Id() {
+    //IDを設定
+    public String getId() {
         return Id;
     }
+    //PassWordを取得
     public void setPassWord(String PassWord) {
         this.PassWord = PassWord;
     }
+    //PassWordを設定
     public String getPassWord() {
         return PassWord;
     }
+    //Nameを取得
     public void setName(String Name) {
         this.Name = Name;
     }
+    //Nameを設定
     public String getName() {
         return Name;
     }
+    //Login_Timeを取得
     public void setLogin_Time(String Login_Time) {
         this.Login_Time = Login_Time;
     }
+    //Login_Timeを設定
     public String getLogin_Time() {
         return Login_Time;
     }
+    //Commentを取得
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
+    //Commentを設定
     public String getComment() {
         return Comment;
     }
@@ -42,8 +53,6 @@ public class EmployeeBean {
 
 /*
 外部からアクセスされるフィールドに対して、アクセッサメソッドを持つことです。
-セッターメソッド
-フィールドの値を設定するためのアクセッサメソッド、「setフィールド名」という形で記述します。
-ゲッターメソッド
-フィールドの値を取得するためのアクセッサメソッド、「getフィールド名」という形で記述します。
+値を設定するメソッドがsetterで、setXxx()というメソッド名になる。
+値を取得するメソッドがgetterで、getXxx()というメソッド名になる。
 */
