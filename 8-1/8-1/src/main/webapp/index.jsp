@@ -5,6 +5,7 @@
 <%
  // EmployeeController.javaから渡されたBeanを受けとります。リクエストスコープからの値を取得　（EmployeeBean）=登録したデータの型
  EmployeeBean employeeBean = (EmployeeBean) request.getAttribute("EmployeeBean");
+ 　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　//　　　　　↑キャストしている。（別の型に置き換えること）
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -33,7 +34,7 @@
  </tr>
  </table>
  
- <!-- 問② それ以外の表示（エラーの場合）-->
+ <!--それ以外の表示（エラーの場合）-->
  <% } else { %>
   <p><%out.println("IDもしくはパスワードが間違ってます");%></p>
  <% } %>
