@@ -22,7 +22,7 @@ public class EmployeeController extends HttpServlet {
 
  /*「GET」メソッドはクライアントからページの要求を行う場合に使われます。直接サーブレット名をURLに指定して表示したりリンクに設定されたサーブレットをクリックした場合には「GET」を使ってリクエストが来ます。
    またフォームにおいて送信方法に「GET」を使った場合にも「GET」メソッドが使われます。
-   「POST」メソッドはクライアントからデータを送る場合に使われます。主にフォームにおいて送信方法に「POST」を指定した場合に使われます。
+   「POST」メソッドはクライアントがWebブラウザ上で入力した内容をサーバ側に送信するために使用するメソッド。主にフォームにおいて送信方法に「POST」を指定した場合に使われます。
  */
                     //↓HTTPリクエストに対応　　　　　　　　　　　　　　　　　　　　↓HTTPレスポンスに対応
  public void doPost(HttpServletRequest request, HttpServletResponse response)
